@@ -34,11 +34,16 @@ function Content() {
       if(count < 9){
         const getLogo = document.querySelectorAll('.rightMobile img')[count]
         const getLogo1 = document.querySelectorAll('.rightPc img')[count]
-        getLogo.classList.add('animation')
-        getLogo1.classList.add('animation')
+        const width = document.body.clientWidth
+        if(width < 300){
+          getLogo.classList.add('animationInMobile')
+        }else{
+          getLogo.classList.add('animation')
+          getLogo1.classList.add('animation')
+        }
       }else{
         document.querySelector('.rightMobile .mainLogo img').classList.add('addMainLogoAnimation')
-        document.querySelector('.rightPc .mainLogo img').classList.add('addMainLogoAnimation')
+        document.querySelector('.right .mainLogo img').classList.add('addMainLogoAnimation')
       }
       if(count > 11){
         document.querySelector('.content .rightMobile').classList.add('lowHeight')

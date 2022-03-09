@@ -215,6 +215,12 @@
     animation-delay:1s;
     animation-fill-mode: forwards;
 }
+.animationInMobile{
+    animation-name:animationInMobile;
+    animation-duration:1s;
+    animation-delay:1s;
+    animation-fill-mode: forwards;
+}
 .addMainLogoAnimation{
     animation-name:animate;
     animation-duration:2s;
@@ -259,6 +265,13 @@
     100%{
         left:45%;
         top:45%;
+        opacity:0;
+    }
+}
+@keyframes animationInMobile {
+    100%{
+        left:45%;
+        top:30%;
         opacity:0;
     }
 }
@@ -373,7 +386,48 @@
     .content .left p{
         font-size:14px;
     }
+    .header .logo{
+        width:50%;
+    }
+    .header .logo .bars{
+        width:50%;
+    }
     .content .left .demo{
         margin-top:15px;
+    }
+    .content .right>img:first-child{
+        top:10%;
+    }
+    .content .right>img:nth-child(2){
+        left:10%;
+        top:20%;
+    }
+    .content .right>img:nth-child(3){
+        left:5%;
+        top:35%;
+    }
+    .content .right>img:nth-child(4){
+        left:10%;
+        top:50%;
+    }
+    .content .right>img:nth-child(5){
+        left:35%;
+        top:57%;
+    }
+    .content .right>img:nth-child(6){
+        left:67%;
+        top:55%;
+    }
+    .content .right>img:nth-child(7){
+        left:80%;
+        top:40%;
+    }
+    .content .right>img:nth-child(8){
+        top:25%;
+        left:80%;
+    }
+    .content .right>img:nth-child(9){
+        top:15%;
+        left:75%;
     }
 }
