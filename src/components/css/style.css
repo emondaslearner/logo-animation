@@ -1,0 +1,379 @@
+.header{
+    width:95%;
+    display: flex;
+    margin:30px auto;
+}
+.header .logo{
+    width:15%;
+}
+.header .logo img{
+    width:65%;
+}
+.header .menu{
+    width:60%;
+    display: flex;
+}
+.header .menu li{
+    list-style:none;
+}
+.header .bars{
+    display:none;
+}
+.header .animationBorder{
+    text-decoration:none;
+    display: inline-block;
+    margin:10px 15px;
+    color:black;
+    font-size:15px;
+    transition: .3s all ease;
+}
+.header .close{
+    display: none;
+}
+.header .animationBorder::after{
+    content:'';
+    display: block;
+    margin-top:5px;
+    width:0;
+    height:2px;
+    background-color:black;
+    transition: width .3s;
+}
+.header .animationBorder:hover::after{
+    width:100%
+}
+.header .auth{
+    width:25%;
+    display: flex;
+    justify-content: flex-end;
+}
+.header .auth button{
+    border:0;
+    background:none;
+    margin:5px 10px;
+    cursor:pointer;
+}
+.header .auth .activeAuth{
+    background:none;
+    border:1px solid rgb(160, 158, 158);
+    border-radius:5px;
+    padding:7px 15px;
+    overflow: hidden;
+    position: relative;
+}
+.header .auth .activeAuth::before{
+    position:absolute;
+    top:0;
+    left: 0;
+    content:'';
+    display:block;
+    width:100%;
+    height:0;
+    background-color:rgba(160, 158, 158, 0.274);
+    transition:height .3s;
+}
+.header .auth .activeAuth:hover::before{
+    height:100%;
+}
+.content{
+    display:flex;
+    width:80%;
+    margin: auto;
+}
+.content .left{
+    width:40%;
+    margin-top:35px;
+    overflow:hidden;
+}
+.content .left h1{
+    width:90%;
+    font-size:45px;
+}
+.content .left p{
+    line-height:25px;
+    font-size:15px;
+    width:80%;
+}
+.content .left button{
+    cursor: pointer;
+}
+.content .left .trial{
+    margin-top:20px;
+    padding:10px 20px;
+    border-radius:5px;
+    border:0;
+    background-color:#000000;
+    color:white;
+    margin-right:30px;
+    border:2px solid transparent;
+    transition:.3s all ease;
+}
+.authInMobile{
+    display: none;
+}
+.content .left .trial:hover{
+    border:2px solid #000000;
+    background-color: white;
+    color:#000;
+}
+.content .left .demo{
+    border:none;
+    background:none;
+    border-radius:20px;
+    padding:10px 20px;
+    border-right:2px solid #000;
+    border-left:2px solid #000;
+    transition:.3s all ease;
+}
+.content .left .demo:hover{
+    background-color:#000;
+    color:white;
+}
+.content .company p{
+    margin-top:50px;
+    color:rgb(209, 208, 208);
+    font-size:15px;
+    margin-bottom:0;
+}
+.content .company .companyLogo{
+    display:flex;
+    height:100%;
+}
+.content .company .companyLogo img{
+    width:20%;
+    height:auto;
+    margin-right:2%;
+}
+.content .company .companyLogo img:nth-child(4){
+    width:15%;
+    height:15%;
+    margin-top:6%;
+}
+.content .right{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left:10%;
+}
+.content .rightMobile{
+    display:none;
+}
+.content .right>img{
+    position:absolute;
+    top:0;
+    width:18%;
+    height:auto;
+}
+.content .right>img:first-child{
+    top:0;
+}
+.content .right>img:nth-child(2){
+    left:10%;
+    top:10%;
+}
+.content .right>img:nth-child(3){
+    left:0%;
+    top:35%;
+}
+.content .right>img:nth-child(4){
+    left:8%;
+    top:67%;
+}
+.content .right>img:nth-child(5){
+    left:35%;
+    top:80%;
+}
+.content .right>img:nth-child(6){
+    left:67%;
+    top:77%;
+}
+.content .right>img:nth-child(7){
+    left:83%;
+    top:47%;
+}
+.content .right>img:nth-child(8){
+    top:25%;
+    left:85%;
+}
+.content .right>img:nth-child(9){
+    top:10%;
+    left:75%;
+}
+.content .right .mainLogo{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+.content .right .mainLogo img{
+    width:45%;
+}
+.animation{
+    animation-name:animate1;
+    animation-duration:1s;
+    animation-delay:1s;
+    animation-fill-mode: forwards;
+}
+.addMainLogoAnimation{
+    animation-name:animate;
+    animation-duration:2s;
+    animation-delay:1s;
+    animation-fill-mode: forwards;
+}
+.showMenu{
+    animation-name:showMenu;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+}
+.lowHeight{
+    animation-name:lowHeight;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+}
+@keyframes lowHeight {
+    100%{
+        height:50vh;
+    }
+}
+@keyframes showMenu {
+    0%{
+        width:0%;
+    }
+    100%{
+        width:40%;
+    }
+}
+@keyframes animate {
+    100%{
+        width:50%;
+        margin-top:5%;
+    }
+}
+@keyframes iterationAnimation {
+    100%{
+        width:51%;
+    }
+}
+@keyframes animate1 {
+    100%{
+        left:45%;
+        top:45%;
+        opacity:0;
+    }
+}
+@media screen and (max-width:900px) {
+    .menu{
+        display: none;
+        position:fixed;
+        right:0;
+        top:0;
+        height:100vh;
+        background-color:#000;
+        z-index:999;
+        background-color:rgb(160, 158, 158);
+        padding-top:5%;
+        padding-left:5%;
+    }
+    .header .authInMobile{
+        display:block;
+    }
+    .header .authInMobile a{
+        color:white;
+        display:table;
+    }
+    .header .close{
+        display: block;
+        position: fixed;
+        top:20px;
+        right:20px;
+        font-size:25px;
+        cursor: pointer;
+    }
+    .menu li a{
+        color:white !important;
+    }
+    .auth{
+        display: none;
+    }
+    .header .auth{
+        display:none;
+    }
+    .header .menu{
+        display: none;
+    }
+    .header .logo{
+        width:25%;
+    }
+    .header .bars{
+        display: flex;
+        width:75%;
+        justify-content:flex-end;
+        font-size:20px;
+    }
+    .header .bar{
+        cursor:pointer;
+    }
+    .content{
+        display:block;
+    }
+    .content .left{
+        width:80%;
+        margin: auto;
+    }
+    .content .rightMobile{
+        display: block;
+        width:100%;
+        height:100vh;
+        margin-left:0%;
+    }
+    .content .rightMobile .mainLogo img{
+        margin-top:35%;
+    }
+    .content .rightPc{
+        display: none;
+    }
+    .content .right>img:first-child{
+        top:0;
+        left:45%;
+    }
+}
+@media screen and (max-width:600px) {
+    .content .rightMobile .mainLogo img{
+        margin-top:40%;
+    }
+}
+@media screen and (max-width:500px){
+    .content{
+        width:100%;
+    }
+    .content .rightMobile .mainLogo img{
+        margin-top:50%;
+    }
+    .content .left{
+        width:90%;
+        margin: auto;
+    }
+    .content .left h1{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:400px){
+    .content .rightMobile .mainLogo img{
+        margin-top:55%;
+    }
+    .content .right>img{
+        width:15%;
+    }
+}
+@media screen and (max-width:300px){
+    .content .left h1{
+        font-size: 25px;
+    }
+    .content .left p{
+        font-size:14px;
+    }
+    .content .left .demo{
+        margin-top:15px;
+    }
+}
