@@ -35,7 +35,7 @@ function Content() {
         const getLogo = document.querySelectorAll('.rightMobile img')[count]
         const getLogo1 = document.querySelectorAll('.rightPc img')[count]
         const width = document.body.clientWidth
-        if(width < 300){
+        if(width < 400){
           getLogo.classList.add('animationInMobile')
         }else{
           getLogo.classList.add('animation')
